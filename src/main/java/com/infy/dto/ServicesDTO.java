@@ -1,6 +1,6 @@
 package com.infy.dto;
 
-public class ServiceDTO {
+public class ServicesDTO {
     private Integer serviceId;
     private String serviceName;
     private Integer serviceCost;

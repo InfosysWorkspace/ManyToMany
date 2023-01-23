@@ -8,7 +8,16 @@ public class CustomerDTO {
     private String emailId;
     private String name;
     private LocalDate dateOfBirth;
-    private Set<ServiceDTO> bankService;
+
+    public Set<ServicesDTO> getBankServices() {
+        return this.bankServices;
+    }
+
+    public void setBankServices(final Set<ServicesDTO> bankServices) {
+        this.bankServices = bankServices;
+    }
+
+    private Set<ServicesDTO> bankServices;
 
     public Integer getCustomerId() {
         return this.customerId;
@@ -42,13 +51,7 @@ public class CustomerDTO {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Set<ServiceDTO> getBankService() {
-        return this.bankService;
-    }
 
-    public void setBankService(final Set<ServiceDTO> bankService) {
-        this.bankService = bankService;
-    }
 
     @Override
     public String toString() {
@@ -57,7 +60,7 @@ public class CustomerDTO {
                 ", emailId='" + emailId + '\'' +
                 ", name='" + name + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", bankService=" + bankService +
+                ", bankServices=" + bankServices +
                 '}';
     }
 }
